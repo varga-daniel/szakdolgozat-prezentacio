@@ -1,0 +1,72 @@
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass{beamer}
+
+\frenchspacing
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[magyar]{babel}
+
+% AMS
+\usepackage{amssymb,amsmath}
+
+% Graphic packages
+\usepackage{graphicx}
+
+% Syntax highlighting
+\usepackage{listings}
+
+\usetheme{Szeged}
+\usecolortheme{beaver}
+
+\title[IDE készítése a Rust-hoz]{Integrált fejlesztőkörnyezet készítése a Rust programozási nyelvhez}
+\author{Varga Dániel}
+\institute{Miskolci Egyetem}
+\date{2019. június 12.}
+
+\begin{document}
+    \frame{\titlepage}
+
+    \section{Rust}
+
+    \begin{frame}[fragile]
+        \frametitle{A Rust nyelv}
+
+        \begin{itemize}
+            \item Multi-paradigmájú rendszerprogramozási nyelv
+            \item Biztonságos kódra helyez hangsúlyt
+            \item Szintaktikailag hasonlít a C++-ra \begin{itemize}
+                \item Tervezésben különbözik
+                \item Memória-biztonság C++-hoz hasonló sebességek mellett
+            \end{itemize}
+        \end{itemize}
+
+    \end{frame}
+
+    \begin{frame}[fragile]
+        \frametitle{Történet}
+
+        \begin{itemize}
+            \item \textbf{2006:} Graydon Hoare, Mozilla alkalmazott személyes projektje
+            \item \textbf{2009:} Mozilla támogatja a projektet \begin{itemize}
+                \item Létrejön egy csapat, cél: \begin{itemize}
+                    \item A nyelv tovább fejlesztése
+                    \item A nyelv felhasználása Mozilla Servo projektjében
+                \end{itemize}
+            \end{itemize}
+            \item \textbf{2010:} Mozilla nyilvánosságra hozza a nyelvet \begin{itemize}
+                \item A csapat fókuszt vált
+                \item Az eredeti OCaml-ben íródott fordító helyett írnak egy Rust fordítót Rust-ban (\texttt{rustc})
+                \item LLVM backend-ként
+            \end{itemize}
+            \item \textbf{2011:} A \texttt{rustc} lefordítja saját magát
+            \item \textbf{2012:} Első számozott pre-alfa kiadás
+            \item \underline{\textbf{2015. május 15:}} Rust 1.0, nyelv és fordító kiadása \begin{itemize}
+                \item Új verziók hat hetente
+                \item Három csatornán: alfa, béta, és kiadás
+            \end{itemize}
+        \end{itemize}
+    \end{frame}
+
+\end{document}
