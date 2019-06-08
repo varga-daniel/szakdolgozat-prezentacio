@@ -89,4 +89,32 @@
             \end{tabular}
         \end{table}
     \end{frame}
+
+    \begin{frame}[fragile]
+        \frametitle{Összehasonlítás C++-szal}
+
+        \begin{table}
+            \centering
+            \begin{tabular}{|D|L|L|}
+                \cline{2-3}
+                 \multicolumn{1}{c|}{} & Rust & C++ \\ \hline
+                 "Használat mozgatás után" hibák 
+                 & A fordító a fent említett analizálót használja ezek észrevételére 
+                 & Felderíthetőek különleges "sentinel" állapottal futásidőben, vagy külsős kódellenőrző programokkal fordításidőben \\ \hline
+                 "Használat felszabadítás után" hibák
+                 & \multicolumn{2}{|Z|}{Okos mutatók használata ajánlott a nyers mutatók helyett ezek elkerülésére} \\ \hline
+            \end{tabular}
+        \end{table}
+    \end{frame}
+
+    \section{IDE}
+
+    \begin{frame}[fragile]
+        \frametitle{Integrált fejlesztői környezet}
+
+        \begin{itemize}
+            \item Az angol \emph{integrated development environment} (IDE) megnevezésből
+        \end{itemize}
+
+    \end{frame}
 \end{document}
