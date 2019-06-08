@@ -17,6 +17,11 @@
 % Syntax highlighting
 \usepackage{listings}
 
+\usepackage{array}
+\newcolumntype{D}{>{\arraybackslash}m{0.3\textwidth}}
+\newcolumntype{L}{>{\centering\arraybackslash}m{0.3\textwidth}}
+\newcolumntype{Z}{>{\centering\arraybackslash}m{0.6\textwidth}}
+
 \usetheme{Szeged}
 \usecolortheme{beaver}
 
@@ -69,4 +74,19 @@
         \end{itemize}
     \end{frame}
 
+    \begin{frame}[fragile]
+        \frametitle{Összehasonlítás C++-szal}
+
+        \begin{table}
+            \centering
+            \begin{tabular}{|D|L|L|}
+                \cline{2-3}
+                 \multicolumn{1}{c|}{} & Rust & C++ \\ \hline
+                 Költség nélküli absztrakció & \multicolumn{2}{|Z|}{Igen: Trait / template dispatchelhető statikusan} \\ \hline
+                 Mozgatás szemantika: forrásobjektumok állapota 
+                 & Beépített statikus analizáló megtiltja az objektumok használatát mozgatás után 
+                 & Javasolt, hogy egy mozgatás konstruktor érvényes állapotban hagyja a forrásobjektumot (de attól azt még nem érdemes használni) \\ \hline
+            \end{tabular}
+        \end{table}
+    \end{frame}
 \end{document}
